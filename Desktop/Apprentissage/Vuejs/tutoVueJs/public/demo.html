@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<script>
+
+    var phrase = "La premier point auquel il faut faire attention le petit cheval de manège"
+
+    var frequence = function (phrase) {
+        
+    var splitted = phrase.toLowerCase().split(" ")
+    var compteur = {}
+    for (var i = 0; i < splitted.length; i++) {
+        var split = splitted[i]
+        if (compteur[split] == undefined) { 
+            compteur[split] = 1
+        } else {
+            compteur[split]++ 
+        }
+    }
+    return compteur
+    }
+
+    var eleve1 = {
+        nom: 'Jean',
+        note: [15, 16, 18]
+    }
+    var eleve2 = {
+        nom: 'Marc',
+        note: [5, 18, 20]
+    }
+
+
+
+    var moyenne = function (notes) {
+        var somme = 0
+        for (var i = 0; i < notes.length; i++) {
+            somme += notes[i]
+        }
+        return somme / notes.length
+    }
+
+    var estMeilleur = function (eleveA, eleveB) {
+        var moyenne1 = moyenne(eleveA.note)
+        var moyenne2 = moyenne(eleveB.note)
+        if (moyenne1 > moyenne2) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+
+</script>
+<body>
+    
+</body>
+</html>
